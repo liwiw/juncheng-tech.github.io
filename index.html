@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>郡城智能科技 - 烟台本地 AI 服务商</title>
+    <meta name="description" content="郡城智能科技专注于人工智能技术应用，提供工业自动化、企业网站建设、AI 智能体系统等服务">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Microsoft YaHei', Arial, sans-serif; line-height: 1.6; color: #333; }
+        
+        /* 色彩方案 */
+        :root {
+            --primary-color: #1E88E5;
+            --secondary-color: #424242;
+            --accent-color: #FF6F00;
+            --bg-color: #FFFFFF;
+        }
+        
+        /* 头部 */
+        header { background: var(--primary-color); color: white; padding: 1rem 0; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+        nav { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.5rem; font-weight: bold; }
+        .nav-links { list-style: none; display: flex; gap: 2rem; }
+        .nav-links a { color: white; text-decoration: none; }
+        
+        /* 横幅 */
+        .hero { background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); color: white; padding: 4rem 0; text-align: center; }
+        .hero h1 { font-size: 2.5rem; margin-bottom: 1rem; }
+        .hero p { font-size: 1.2rem; margin-bottom: 2rem; }
+        .btn { display: inline-block; padding: 0.8rem 2rem; background: var(--accent-color); color: white; text-decoration: none; border-radius: 5px; }
+        
+        /* 业务介绍 */
+        .services { padding: 4rem 0; }
+        .services h2 { text-align: center; margin-bottom: 3rem; color: var(--primary-color); }
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+        .service-card { padding: 2rem; border: 1px solid #ddd; border-radius: 10px; text-align: center; }
+        .service-card h3 { color: var(--primary-color); margin-bottom: 1rem; }
+        
+        /* 页脚 */
+        footer { background: var(--secondary-color); color: white; padding: 2rem 0; text-align: center; }
+        .footer-links { margin-bottom: 1rem; }
+        .footer-links a { color: white; margin: 0 1rem; text-decoration: none; }
+        
+        /* 响应式 */
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .hero h1 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">郡城智能科技</div>
+                <ul class="nav-links">
+                    <li><a href="#home">首页</a></li>
+                    <li><a href="#services">产品中心</a></li>
+                    <li><a href="#solutions">解决方案</a></li>
+                    <li><a href="#about">关于我们</a></li>
+                    <li><a href="#contact">联系我们</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="container">
+            <h1>AI 驱动未来 智能改变生活</h1>
+            <p>烟台本地 AI 服务商 - 专注于人工智能技术应用</p>
+            <a href="#contact" class="btn">立即咨询</a>
+        </div>
+    </section>
+
+    <section class="services" id="services">
+        <div class="container">
+            <h2>我们的核心业务</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>🏭 工业自动化</h3>
+                    <p>PLC 编程、Modbus 通信、SCADA 集成、IIoT 数据采集，助力企业智能化升级</p>
+                </div>
+                <div class="service-card">
+                    <h3>🌐 企业网站建设</h3>
+                    <p>响应式设计、SEO 优化、快速部署，打造专业企业形象</p>
+                </div>
+                <div class="service-card">
+                    <h3>🤖 AI 智能体系统</h3>
+                    <p>基于 OpenClaw 的人形神国架构，16 智能体协作，实现自动化决策</p>
+                </div>
+                <div class="service-card">
+                    <h3>📊 数据分析与报表</h3>
+                    <p>GRU 智能分类、财务报告分析、数据可视化，挖掘数据价值</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-links">
+                <a href="#services">产品中心</a>
+                <a href="#solutions">解决方案</a>
+                <a href="#about">关于我们</a>
+            </div>
+            <p>📞 联系方式：15653883002 | 📧 Email: test@example.com</p>
+            <p>📍 地址：山东省烟台市 | 域名：jchyiming.com.cn</p>
+            <p>&copy; 2026 郡城智能科技。All Rights Reserved. | <a href="#" style="color: white;">鲁 ICP 备 XXXXXXXX 号</a></p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,104 @@
+# 郡城智能科技官网 - Git 忽略配置
+# 保护技术壁垒，禁止上传敏感信息
+
+# 操作系统文件
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# 编辑器文件
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# 日志文件
+*.log
+logs/
+
+# 环境配置 (含凭证)
+.env
+.env.local
+.env.production
+config.json
+credentials.json
+*.credentials
+
+# 敏感信息
+passwords.txt
+keys/
+secrets/
+
+# 内部脚本
+scripts/deploy-*.ps1
+scripts/connect-*.ps1
+scripts/auto-*.ps1
+scripts/intel_*.py
+scripts/training_*.py
+
+# 数据文件
+data/
+*.jsonl
+training_data/
+memory/intel/
+
+# 模型文件
+*.pth
+*.pt
+*.h5
+*.pkl
+models/
+
+# 临时文件
+tmp/
+temp/
+*.tmp
+
+# 构建输出
+dist/
+build/
+public/
+
+# 依赖
+node_modules/
+vendor/
+
+# 数据库
+*.db
+*.sqlite
+*.sql
+
+# 备份文件
+*.bak
+backup/
+archive/
+
+# 证书和密钥
+*.pem
+*.key
+*.crt
+ssl/
+
+# 本地配置
+local_config.json
+server_config.json
+
+# OpenClaw 内部文件
+gateway.config.json
+cron/jobs.json
+systems/
+agents/
+
+# 测试文件
+test/
+tests/
+__tests__/
+*.test.js
+*.spec.js
+
+# 文档 (部分)
+docs/internal/
+docs/technical/
+MEMORY.md
+memory/
