@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>郡城智能科技 - 烟台本地 AI 服务商</title>
     <meta name="description" content="郡城智能科技专注于人工智能技术应用，提供工业自动化、企业网站建设、AI 智能体系统等服务">
+    <meta name="keywords" content="AI,人工智能，工业自动化，企业网站，智能体，烟台">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Microsoft YaHei', Arial, sans-serif; line-height: 1.6; color: #333; }
         
-        /* 色彩方案 */
         :root {
             --primary-color: #1E88E5;
             --secondary-color: #424242;
@@ -17,36 +17,58 @@
             --bg-color: #FFFFFF;
         }
         
-        /* 头部 */
-        header { background: var(--primary-color); color: white; padding: 1rem 0; }
+        header { background: var(--primary-color); color: white; padding: 1rem 0; position: sticky; top: 0; z-index: 100; }
         .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
         nav { display: flex; justify-content: space-between; align-items: center; }
         .logo { font-size: 1.5rem; font-weight: bold; }
         .nav-links { list-style: none; display: flex; gap: 2rem; }
-        .nav-links a { color: white; text-decoration: none; }
+        .nav-links a { color: white; text-decoration: none; transition: opacity 0.3s; }
+        .nav-links a:hover { opacity: 0.8; }
         
-        /* 横幅 */
-        .hero { background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); color: white; padding: 4rem 0; text-align: center; }
-        .hero h1 { font-size: 2.5rem; margin-bottom: 1rem; }
-        .hero p { font-size: 1.2rem; margin-bottom: 2rem; }
-        .btn { display: inline-block; padding: 0.8rem 2rem; background: var(--accent-color); color: white; text-decoration: none; border-radius: 5px; }
+        .hero { background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); color: white; padding: 6rem 0; text-align: center; }
+        .hero h1 { font-size: 3rem; margin-bottom: 1rem; animation: fadeInUp 1s; }
+        .hero p { font-size: 1.5rem; margin-bottom: 2rem; animation: fadeInUp 1s 0.2s both; }
+        .btn { display: inline-block; padding: 1rem 2.5rem; background: var(--accent-color); color: white; text-decoration: none; border-radius: 5px; font-weight: bold; transition: transform 0.3s; animation: fadeInUp 1s 0.4s both; }
+        .btn:hover { transform: translateY(-3px); }
         
-        /* 业务介绍 */
-        .services { padding: 4rem 0; }
-        .services h2 { text-align: center; margin-bottom: 3rem; color: var(--primary-color); }
-        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
-        .service-card { padding: 2rem; border: 1px solid #ddd; border-radius: 10px; text-align: center; }
-        .service-card h3 { color: var(--primary-color); margin-bottom: 1rem; }
+        .services { padding: 5rem 0; }
+        .services h2 { text-align: center; margin-bottom: 3rem; color: var(--primary-color); font-size: 2.5rem; }
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2.5rem; }
+        .service-card { padding: 2.5rem; border: 2px solid #e0e0e0; border-radius: 15px; text-align: center; transition: transform 0.3s, box-shadow 0.3s; }
+        .service-card:hover { transform: translateY(-10px); box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        .service-card h3 { color: var(--primary-color); margin-bottom: 1rem; font-size: 1.5rem; }
+        .service-card .icon { font-size: 3rem; margin-bottom: 1rem; }
         
-        /* 页脚 */
-        footer { background: var(--secondary-color); color: white; padding: 2rem 0; text-align: center; }
-        .footer-links { margin-bottom: 1rem; }
+        .about { background: #f5f5f5; padding: 5rem 0; }
+        .about h2 { text-align: center; margin-bottom: 3rem; color: var(--primary-color); font-size: 2.5rem; }
+        .about-content { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
+        .about-text h3 { color: var(--secondary-color); margin-bottom: 1rem; }
+        .about-stats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+        .stat { background: white; padding: 1.5rem; border-radius: 10px; text-align: center; }
+        .stat-number { font-size: 2.5rem; color: var(--primary-color); font-weight: bold; }
+        
+        .contact { padding: 5rem 0; }
+        .contact h2 { text-align: center; margin-bottom: 3rem; color: var(--primary-color); font-size: 2.5rem; }
+        .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; }
+        .contact-item { text-align: center; padding: 2rem; }
+        .contact-item .icon { font-size: 2.5rem; margin-bottom: 1rem; }
+        .contact-item h3 { color: var(--primary-color); margin-bottom: 0.5rem; }
+        
+        footer { background: var(--secondary-color); color: white; padding: 3rem 0; text-align: center; }
+        .footer-links { margin-bottom: 1.5rem; }
         .footer-links a { color: white; margin: 0 1rem; text-decoration: none; }
+        .footer-links a:hover { text-decoration: underline; }
         
-        /* 响应式 */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
         @media (max-width: 768px) {
             .nav-links { display: none; }
             .hero h1 { font-size: 2rem; }
+            .hero p { font-size: 1.2rem; }
+            .about-content { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -58,7 +80,6 @@
                 <ul class="nav-links">
                     <li><a href="#home">首页</a></li>
                     <li><a href="#services">产品中心</a></li>
-                    <li><a href="#solutions">解决方案</a></li>
                     <li><a href="#about">关于我们</a></li>
                     <li><a href="#contact">联系我们</a></li>
                 </ul>
@@ -79,34 +100,98 @@
             <h2>我们的核心业务</h2>
             <div class="services-grid">
                 <div class="service-card">
-                    <h3>🏭 工业自动化</h3>
+                    <div class="icon">🏭</div>
+                    <h3>工业自动化</h3>
                     <p>PLC 编程、Modbus 通信、SCADA 集成、IIoT 数据采集，助力企业智能化升级</p>
                 </div>
                 <div class="service-card">
-                    <h3>🌐 企业网站建设</h3>
+                    <div class="icon">🌐</div>
+                    <h3>企业网站建设</h3>
                     <p>响应式设计、SEO 优化、快速部署，打造专业企业形象</p>
                 </div>
                 <div class="service-card">
-                    <h3>🤖 AI 智能体系统</h3>
+                    <div class="icon">🤖</div>
+                    <h3>AI 智能体系统</h3>
                     <p>基于 OpenClaw 的人形神国架构，16 智能体协作，实现自动化决策</p>
                 </div>
                 <div class="service-card">
-                    <h3>📊 数据分析与报表</h3>
+                    <div class="icon">📊</div>
+                    <h3>数据分析与报表</h3>
                     <p>GRU 智能分类、财务报告分析、数据可视化，挖掘数据价值</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer id="contact">
+    <section class="about" id="about">
+        <div class="container">
+            <h2>关于我们</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>郡城智能科技</h3>
+                    <p>我们是一家专注于人工智能技术应用的本地服务商，总部位于山东省烟台市。凭借深厚的技术积累和丰富的行业经验，我们为企业提供全方位的智能化解决方案。</p>
+                    <p style="margin-top: 1rem;">我们的团队由资深工程师和 AI 专家组成，致力于将前沿技术转化为实际生产力，帮助客户实现数字化转型。</p>
+                </div>
+                <div class="about-stats">
+                    <div class="stat">
+                        <div class="stat-number">10+</div>
+                        <div>年行业经验</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">50+</div>
+                        <div>成功案例</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">16</div>
+                        <div>智能体协作</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">24/7</div>
+                        <div>技术支持</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2>联系我们</h2>
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <div class="icon">📞</div>
+                    <h3>电话咨询</h3>
+                    <p>15653883002</p>
+                </div>
+                <div class="contact-item">
+                    <div class="icon">📧</div>
+                    <h3>邮件联系</h3>
+                    <p>test@example.com</p>
+                </div>
+                <div class="contact-item">
+                    <div class="icon">📍</div>
+                    <h3>公司地址</h3>
+                    <p>山东省烟台市</p>
+                </div>
+                <div class="contact-item">
+                    <div class="icon">🌐</div>
+                    <h3>官方网站</h3>
+                    <p>jchyiming.cn</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
         <div class="container">
             <div class="footer-links">
                 <a href="#services">产品中心</a>
                 <a href="#solutions">解决方案</a>
                 <a href="#about">关于我们</a>
+                <a href="#contact">联系我们</a>
             </div>
             <p>📞 联系方式：15653883002 | 📧 Email: test@example.com</p>
-            <p>📍 地址：山东省烟台市 | 域名：jchyiming.com.cn</p>
+            <p>📍 地址：山东省烟台市 | 域名：jchyiming.cn</p>
             <p>&copy; 2026 郡城智能科技。All Rights Reserved. | <a href="#" style="color: white;">鲁 ICP 备 XXXXXXXX 号</a></p>
         </div>
     </footer>
