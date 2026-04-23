@@ -1,43 +1,52 @@
 # 郡城智能科技官网
 
-这是郡城智能科技的官方网站，部署在 GitHub Pages 上。
+**公司名称**: 郡城智能科技  
+**品牌**: OpenClaw  
+**创始人**: 太一 (李伟炜)  
+**位置**: 山东烟台
 
-## 访问地址
+---
 
-- **GitHub Pages**: https://juncheng-tech.github.io/juncheng-tech.github.io/
-- **自定义域名**: https://juncheng.com (待配置)
+## 公司业务
 
-## 服务介绍
+### 1. AI 智能体开发
+- 基于 OpenClaw 框架
+- 定制化企业智能体
+- 自动化工作流
 
-- 🤖 AI 智能体开发
-- 📊 数据分析服务
-- 🌐 企业官网建设
-- 📱 自媒体内容制作
-- 🔧 系统运维服务
-- 📝 文档自动化
+### 2. LOGO 设计
+- 通义万相 AI 设计
+- 专业高效
+- 3 天交付
+
+### 3. 工业自动化
+- PLC 编程
+- SCADA 集成
+- MES 系统
+
+### 4. 网站开发
+- 企业官网
+- 落地页
+- GitHub Pages 部署
+
+---
+
+## 技术栈
+
+- **前端**: HTML/CSS/JavaScript
+- **AI**: OpenClaw、通义千问、通义万相
+- **部署**: GitHub Pages、阿里云 ECD
+
+---
 
 ## 联系方式
 
-- 📧 邮箱：contact@juncheng.tech
-- 📱 电话：15653883002
-- 📍 地址：山东省烟台市
+- **微信**: 手机号
+- **位置**: 山东烟台
+- **GitHub**: https://github.com/juncheng-tech
 
-## 部署说明
+---
 
-本网站使用 GitHub Pages 部署，自动发布到 gh-pages 分支。
+## 开源协议
 
-### 本地预览
-
-```bash
-# 使用 Python 内置服务器
-python -m http.server 8000
-
-# 或使用 Node.js 的 http-server
-npx http-server -p 8000
-```
-
-然后访问 http://localhost:8000
-
-## License
-
-© 2026 郡城智能科技。All rights reserved.
+MIT License
